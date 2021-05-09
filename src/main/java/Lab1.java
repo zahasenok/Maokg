@@ -18,8 +18,6 @@ public class Lab1 extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-
-
         double mult = 3.0;
 
         Group root = new Group();
