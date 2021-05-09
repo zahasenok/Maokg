@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<StackPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+    <AnchorPane prefHeight="593.0" prefWidth="865.0">
+        <TextArea fx:id="resultTxtArea" editable="false" layoutX="606.0" layoutY="400.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="350.0" />
+
+        <BarChart fx:id="resultBar" barGap="1.0" categoryGap="1.0" layoutX="15.0"  AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <xAxis>
+                <CategoryAxis prefHeight="25.0" prefWidth="504.0" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" tickMarkVisible="false" upperBound="1.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </NumberAxis>
+            </yAxis>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </BarChart>
+
+        <Button fx:id="openFileBtn" layoutX="500.0" layoutY="350.0" minWidth="180.0" mnemonicParsing="false"  text="Open file" />
+        <Button fx:id="createFileBtn" layoutX="500.0" layoutY="400.0" minWidth="180.0" mnemonicParsing="false"  text="Create new file" />
+        <Button fx:id="viewFileBtn" layoutX="500.0" layoutY="450.0" minWidth="180.0" mnemonicParsing="false" text="Show file" />
+        <Button fx:id="test1Btn" layoutX="500.0" layoutY="500.0" mnemonicParsing="false" prefWidth="180.0"  text="Pirson Test" />
+        <Button fx:id="test2Btn" layoutX="500.0" layoutY="550.0" minWidth="180.0" mnemonicParsing="false"  text="Kolmogorov-Smirnov test " />
+
+        <Label fx:id="loadedFileLabel"  layoutX="700.0" layoutY="600.0" prefHeight="47.0" prefWidth="180.0" wrapText="true">
+            <font>
+                <Font size="12.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="cdf1ChoiceBox" layoutX="700.0" layoutY="450.0" minWidth="180.0" prefWidth="180.0" />
+
+        <Label fx:id="param5Label"  layoutX="600.0" layoutY="615.0" minWidth="180.0" text="File path: " />
+        <Label fx:id="param3Label"  layoutX="760.0" layoutY="503.0" minWidth="180.0" text="Mathematical expectation" />
+        <TextField fx:id="param3Edit" layoutX="700.0" layoutY="500.0" maxWidth="50.0"/>
+
+        <Label fx:id="param4Label"  layoutX="760.0" layoutY="553.0" minWidth="180.0" text="Standard deviation"/>
+        <TextField fx:id="param4Edit" layoutX="700.0" layoutY="550.0" maxWidth="50.0"/>
+    </AnchorPane>
+</StackPane>
