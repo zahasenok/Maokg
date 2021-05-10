@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.GeneralPath;
 
 public class Lab2 extends JPanel implements ActionListener {
 
@@ -48,12 +47,12 @@ public class Lab2 extends JPanel implements ActionListener {
         // Set center
         g2d.translate(-tx + 600 , -ty + 600 );
 
-        g2d.rotate(Math.toRadians(angle*100),120,100);
+        g2d.rotate(Math.toRadians(angle*100),125,100);
 
         g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, (float) scale));
 
         // Polygon1
-        GradientPaint gp = new GradientPaint(10, 100, Color.WHITE, 20, 2, Color.YELLOW, true);
+        GradientPaint gp = new GradientPaint(10, 100, Color.GREEN, 20, 2, Color.GRAY, true);
         g2d.setPaint(gp);
         int[] xRect = new int[]{100, 200, 130, 50};
         int[] yRect = new int[]{40, 70, 100, 90};
@@ -62,7 +61,7 @@ public class Lab2 extends JPanel implements ActionListener {
         g2d.fillPolygon(rect);
 
         //Polygon2
-        GradientPaint gp1 = new GradientPaint(10, 100, Color.WHITE, 20, 2, Color.YELLOW, true);
+        GradientPaint gp1 = new GradientPaint(10, 100, Color.GREEN, 20, 2, Color.GRAY, true);
         g2d.setPaint(gp1);
         int[] xRect1 = new int[]{50, 130, 150, 70};
         int[] yRect1 = new int[]{90, 100, 140, 145};
@@ -70,17 +69,14 @@ public class Lab2 extends JPanel implements ActionListener {
         g2d.drawPolygon(rect1);
         g2d.fillPolygon(rect1);
 
-        // Triangle
-        GradientPaint gp2 = new GradientPaint(10, 100, Color.WHITE, 20, 2, Color.YELLOW, true);
-        g2d.setPaint(gp2);
-        int[] xRect2 = new int[]{140, 175, 155};
-        int[] yRect2 = new int[]{102, 89, 130};
-        Polygon rect2 = new Polygon(xRect2, yRect2, 3);
-        g2d.drawPolygon(rect2);
-        g2d.fillPolygon(rect2);
+        // Triangle with lines
+
+        g2d.drawLine(140, 102, 175, 89);
+        g2d.drawLine(175, 89, 155, 130);
+        g2d.drawLine(155, 130, 140, 102);
 
         // Eye1
-        GradientPaint gp3 = new GradientPaint(10, 100, Color.BLACK, 20, 2, Color.GREEN, true);
+        GradientPaint gp3 = new GradientPaint(10, 100, Color.BLACK, 20, 2, Color.BLACK, true);
         g2d.setPaint(gp3);
         int[] xRect3 = new int[]{82, 87, 82, 87};
         int[] yRect3 = new int[]{78, 78, 83, 83};
@@ -89,7 +85,7 @@ public class Lab2 extends JPanel implements ActionListener {
         g2d.fillPolygon(rect3);
 
         // Eye2
-        GradientPaint gp4 = new GradientPaint(10, 100, Color.BLACK, 20, 2, Color.GREEN, true);
+        GradientPaint gp4 = new GradientPaint(10, 100, Color.BLACK, 20, 2, Color.BLACK, true);
         g2d.setPaint(gp4);
         int[] xRect4 = new int[]{77, 82, 77, 82};
         int[] yRect4 = new int[]{108, 108, 113, 113};
@@ -99,13 +95,13 @@ public class Lab2 extends JPanel implements ActionListener {
 
 
         //Lines
-        g2d.setColor(Color.BLUE);
+        g2d.setColor(Color.BLACK);
         g2d.drawLine(30, 33, 62, 78);
         g2d.drawLine(25, 130, 59, 117);
     }
 
     private void drawBorder(Graphics2D g2d) {
-        BasicStroke basicStroke = new BasicStroke(5, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND);
+        BasicStroke basicStroke = new BasicStroke(5, BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL);
         g2d.setStroke(basicStroke);
         GradientPaint gp = new GradientPaint(5, 20, Color.BLUE, 20, 2, Color.YELLOW, true);
         g2d.setPaint(gp);
