@@ -18,7 +18,7 @@ public class Lab1 extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        double mult = 3.0;
+        double mult = 5.0;
 
         Group root = new Group();
         Scene scene = new Scene(root, 300 * mult, 250 * mult);

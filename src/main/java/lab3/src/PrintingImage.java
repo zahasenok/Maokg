@@ -241,7 +241,7 @@ public class PrintingImage extends Application {
 
         //Parts Of the heart
         {
-            CubicCurve qt = new CubicCurve(160, 80, 285, 25, 245, 190, 150, 195);
+            CubicCurve qt = new CubicCurve(150, 80, 285, 25, 245, 190, 150, 195);
             Stop[] stops = new Stop[]{new Stop(0, Color.DARKRED), new Stop(1, Color.RED)};
             LinearGradient lg1 = new LinearGradient(0, 0, 1, 0, true, CycleMethod.NO_CYCLE, stops);
             qt.setStrokeWidth(0);
@@ -251,7 +251,7 @@ public class PrintingImage extends Application {
         }
 
         {
-            CubicCurve qt = new CubicCurve(161, 80, 22, 25, 75, 180, 150.5, 195);
+            CubicCurve qt = new CubicCurve(151, 80, 22, 25, 75, 180, 150.5, 195);
             Stop[] stops = new Stop[]{new Stop(0, Color.DARKRED), new Stop(1, Color.RED)};
             LinearGradient lg1 = new LinearGradient(0, 0, 0, 0, true, CycleMethod.NO_CYCLE, stops);
             qt.setStrokeWidth(0);
@@ -322,7 +322,7 @@ public class PrintingImage extends Application {
                     new QuadCurveTo(97, 140, 161, 108),
                     new QuadCurveTo(220, 85, 248, 112),
                     new LineTo(243, 152),
-                    new QuadCurveTo(215, 127, 161, 154),
+                    new QuadCurveTo(210, 135, 121, 154),
                     new QuadCurveTo(97, 180, 65, 153)
             );
             Stop[] stops = new Stop[]{new Stop(0, Color.DARKGOLDENROD), new Stop(1, Color.GOLDENROD)};
