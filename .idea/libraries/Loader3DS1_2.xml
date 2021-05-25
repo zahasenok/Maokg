@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Loader3DS1_2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/java/Lab5/Loader3DS1_2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,8 +1,4 @@
 package Lab5.src.com.company;
-
-import com.microcrowd.loader;
-
-import com.sun.j3d.utils.geometry.*;
 import com.sun.j3d.utils.universe.*;
 
 import java.awt.Color;
@@ -65,7 +61,7 @@ public class FirstMainClass extends JFrame {
     }
     
     private void addModelToUniverse() throws IOException{
-        scene = getSceneFromFile("source_folder\\horse.obj");
+        scene = getSceneFromFile("G:\\Maokg\\src\\main\\java\\Lab5\\src\\com\\company\\horse.obj");
      // scene=getSceneFromLwoFile("d://3dModels//Aspen.lwo");
         root=scene.getSceneGroup();
     }
@@ -120,7 +116,7 @@ public class FirstMainClass extends JFrame {
     
     private void addAppearance(){
         Appearance HorseAppearance = new Appearance();
-        HorseAppearance.setTexture(getTexture("source_folder\\fur1.jpg"));
+        HorseAppearance.setTexture(getTexture("G:\\Maokg\\src\\main\\java\\Lab5\\src\\com\\company\\fur1.jpg"));
         TextureAttributes texAttr = new TextureAttributes();
         texAttr.setTextureMode(TextureAttributes.COMBINE);
         HorseAppearance.setTextureAttributes(texAttr);
@@ -137,7 +133,7 @@ public class FirstMainClass extends JFrame {
     }
     
     private void addImageBackground(){
-        TextureLoader t = new TextureLoader("source_folder\\background.jpg", canvas);
+        TextureLoader t = new TextureLoader("G:\\Maokg\\src\\main\\java\\Lab5\\src\\com\\company\\background.jpg", canvas);
         Background background = new Background(t.getImage());
         background.setImageScaleMode(Background.SCALE_FIT_ALL);
         BoundingSphere bounds = new BoundingSphere(new Point3d(0.0, 0.0, 0.0),100.0);
