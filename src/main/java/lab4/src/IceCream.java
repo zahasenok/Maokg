@@ -56,7 +56,7 @@ public class IceCream implements ActionListener{
     }
 
     private void buildIceCream() {
-        float width = 0.3f, height = 0.6f;
+        float width = 0.5f, height = 0.5f;
         createHorn(width/2, height, 0, 0, 0, new Color3f(0.541f, 0.302f, 0.117f));
 
         float radius = (float) (width / (2 * ( 1 + Math.sin(Math.PI/3))));
