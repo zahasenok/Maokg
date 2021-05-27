@@ -125,13 +125,6 @@ public class FirstMainClass extends JFrame {
         Horse.setAppearance(HorseAppearance);
     }
     
-    private void addColorBackground(){
-        Background background = new Background(new Color3f(Color.CYAN));
-        BoundingSphere bounds = new BoundingSphere(new Point3d(0.0, 0.0, 0.0),100.0);
-        background.setApplicationBounds(bounds);      
-        root.addChild(background); 
-    }
-    
     private void addImageBackground(){
         TextureLoader t = new TextureLoader("G:\\Maokg\\src\\main\\java\\Lab5\\src\\com\\company\\background.jpg", canvas);
         Background background = new Background(t.getImage());
@@ -171,12 +164,6 @@ public class FirstMainClass extends JFrame {
         file.setFlags (ObjectFile.RESIZE | ObjectFile.TRIANGULATE | ObjectFile.STRIPIFY);
         return file.load(new FileReader(location));
     }
-    
-    //Not always works
-    public static Scene getSceneFromLwoFile(String location) throws IOException {
-        Lw3dLoader loader = new Lw3dLoader();
-        return loader.load(new FileReader(location));
-     }
     
     public static void main(String[]args){
         try {
